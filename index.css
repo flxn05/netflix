@@ -11,8 +11,8 @@ body {
 }
 
 .startpage-container {
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   background-color: black;
   height: 65vh;
   width: 33vw;
@@ -49,6 +49,25 @@ body {
 #ba {animation: img-highlight .5s ease-in-out 1.4s forwards;}
 #bb {animation: img-highlight .5s ease-in-out 1.7s forwards;}
 
+#error {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: black;
+  letter-spacing: 2px;
+  line-height: 36px;
+  animation: error-disappear 1s ease-in-out 8s forwards;
+}
+
+.red {
+  color: red;
+  letter-spacing: 3px;
+}
+
 
 .startpage-container:hover {
   transform: scale(1.005);
@@ -69,3 +88,31 @@ body {
 {0% {filter: brightness(100%);}
 50% {filter: brightness(200%);}
 100% {filter: brightness(100%);}}
+
+@keyframes error-disappear
+{0% {opacity: 1;}
+100% {opacity: 0;}}
+
+/*@media RESPONSIVE*/
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .startpage-container {
+    width: 80vw;
+  }
+  .profile-one {
+    display: grid;
+    grid-template-columns: 1fr;
+    transform: scale(.9);
+    translate: 25vw;
+    padding: 0;
+    margin: 0;
+  }
+  .profile-one:hover {
+    border: 0px;
+  }
+}
+@media (max-width: 599px) {
+  #error {
+    display: inline-block;
+  }
+}
