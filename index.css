@@ -93,6 +93,11 @@ body {
 {0% {opacity: 1;}
 100% {opacity: 0;}}
 
+@keyframes error-appear {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 /*@media RESPONSIVE*/
 
 @media (min-width: 600px) and (max-width: 800px) {
@@ -114,5 +119,8 @@ body {
 @media (max-width: 599px) {
   #error {
     display: inline-block;
+  }
+  .startpage-container {
+    animation: error-appear 1s ease-in-out 8s forwards;
   }
 }
