@@ -68,6 +68,16 @@ body {
   letter-spacing: 3px;
 }
 
+#warning {
+  background-color: red;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  margin-top: 4px;
+}
 
 .startpage-container:hover {
   transform: scale(1.005);
